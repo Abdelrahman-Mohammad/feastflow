@@ -163,7 +163,7 @@
 .tips-video {
   display: block;
   width: calc(800px * var(--scale));
-  max-width: calc(1080px * var(--scale));
+  max-width: 100%;
   margin: calc(20px * var(--scale)) auto;
   border: calc(2px * var(--scale)) solid var(--color-secondary-0);
   border-radius: calc(8px * var(--scale));
