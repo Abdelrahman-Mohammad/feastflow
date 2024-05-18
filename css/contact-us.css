@@ -1,0 +1,103 @@
+.hero {
+  padding-top: calc(8rem * var(--scale));
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: calc(3rem * var(--scale));
+  position: relative;
+  width: fit-content;
+  margin-bottom: calc(2rem * var(--scale));
+  z-index: 2;
+}
+
+.hero p {
+  z-index: 2;
+}
+
+.contact-form-section {
+  padding: calc(2rem * var(--scale)) 0;
+}
+
+.contact-form {
+  background-color: var(--color-secondary-3);
+  padding: calc(1.5rem * var(--scale));
+  border-radius: calc(8px * var(--scale));
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form .form-group {
+  margin-bottom: calc(1rem * var(--scale));
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: calc(0.5rem * var(--scale));
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="date"],
+.contact-form textarea {
+  width: 100%;
+  padding: calc(0.5rem * var(--scale));
+  border: calc(1px * var(--scale)) solid var(--color-secondary-0);
+  border-radius: calc(4px * var(--scale));
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .form-check {
+  margin-bottom: calc(1rem * var(--scale));
+}
+
+.contact-form .form-check-inline {
+  display: inline-block;
+  margin-right: calc(1rem * var(--scale));
+}
+
+.contact-form .form-check input[type="checkbox"] {
+  margin-right: calc(0.5rem * var(--scale));
+}
+
+.contact-form .form-check label {
+  display: inline-block;
+}
+
+.contact-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form .btn-primary,
+.contact-form .btn-secondary {
+  padding: calc(0.5rem * var(--scale)) calc(1rem * var(--scale));
+  border: none;
+  border-radius: calc(4px * var(--scale));
+  cursor: pointer;
+}
+
+.page-section.contact-form-section {
+  padding: calc(4rem * var(--scale)) 0;
+}
+
+.page-section.contact-form-section .section-title {
+  font-size: calc(1.75rem * var(--scale));
+  margin-bottom: calc(1.5rem * var(--scale));
+  text-align: center;
+}

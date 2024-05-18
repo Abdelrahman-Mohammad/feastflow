@@ -1,0 +1,186 @@
+/* Hero */
+.hero {
+  background-color: rgba(0, 0, 0, 0.16);
+  padding-top: calc(8rem * var(--scale));
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/media/recipes/browse-by-category.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: calc(3rem * var(--scale));
+  position: relative;
+  width: fit-content;
+  margin-bottom: calc(2rem * var(--scale));
+  z-index: 2;
+}
+
+.hero p {
+  z-index: 2;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  padding: calc(1rem * var(--scale));
+  gap: calc(0.3rem * var(--scale));
+}
+
+.category {
+  padding: calc(1rem * var(--scale)) calc(4rem * var(--scale));
+  background-color: var(--color-secondary-0);
+  margin: calc(0.5em * var(--scale));
+  border-radius: calc(8px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  border: calc(2px * var(--scale)) solid var(--color-primary);
+}
+
+/* Featured Recipe */
+.featured-card {
+  background-color: var(--color-secondary-0);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: calc(450px * var(--scale));
+  min-height: calc(400px * var(--scale));
+  padding: 0;
+  border-radius: calc(16px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+}
+
+.featured-card::after {
+  content: "FEATURED RECIPE";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: calc(0.5rem * var(--scale)) calc(1rem * var(--scale));
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-top-right-radius: calc(16px * var(--scale));
+  border-bottom-left-radius: calc(16px * var(--scale));
+}
+
+.card-image {
+  width: 100%;
+  border-top-right-radius: calc(16px * var(--scale));
+  border-bottom-right-radius: calc(16px * var(--scale));
+  border-left: calc(2px * var(--scale)) solid var(--color-primary);
+  background-image: url("/media/recipes/featured_miso_salmon_bowl.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.card-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 0 calc(4rem * var(--scale));
+  margin-top: calc(1.5rem * var(--scale));
+}
+
+.card-article .button {
+  width: fit-content;
+}
+
+.ingredients-container {
+  display: flex;
+  gap: calc(1rem * var(--scale));
+}
+
+.ingredient-list li:before {
+  content: "•";
+  margin-right: 5px;
+  color: #29bf12;
+}
+
+/* Recipes */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.recipe-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-secondary-1);
+  padding: calc(1rem * var(--scale));
+  text-align: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.recipe-item img {
+  width: 100%;
+  max-height: calc(250px * var(--scale));
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: calc(1rem * var(--scale));
+  height: 100%;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: calc(1rem * var(--scale));
+}
+
+/* Tips */
+.tips-video {
+  display: block;
+  width: calc(800px * var(--scale));
+  max-width: calc(1080px * var(--scale));
+  margin: calc(20px * var(--scale)) auto;
+  border: calc(2px * var(--scale)) solid var(--color-secondary-0);
+  border-radius: calc(8px * var(--scale));
+  box-shadow: var(--shadow-sm);
+}
+
+.tips-video:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .recipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
